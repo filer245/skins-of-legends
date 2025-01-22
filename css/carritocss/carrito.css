@@ -1,0 +1,141 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+
+}
+
+#main-carrito{
+    background: linear-gradient(#192b66, #a3ccaf 90%);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex:1;
+}
+
+#lista-skins{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    height: 80%;
+    width: 40%;
+    background-color: #efbe1f1a;
+    border-radius: 25px;
+    border: 3px solid #EFBF1F;
+}
+
+#l-tit{
+    margin: 15px;
+    text-align: center;
+    width: 100%;
+    color: #ADBFEB;
+    border-bottom: 4px solid black;
+}
+
+#zona-pago{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    height: 80%;
+    width: 20%;
+}
+
+
+#form-carrito {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 3px solid #ADBFEB;
+    border-radius: 25px;
+    height: 50%;
+    width: 100%;
+    justify-content: space-around;
+}
+
+
+#btn-google{
+    display: flex;
+    
+    background-color: #777c85;
+    color: white;
+    border: none;
+    border-radius: 25px;
+    cursor: url("../cursores/link.png"), auto;
+    transition: all;
+    padding: 10px 20px 10px 20px;
+    transition: all 0.7s ease-in-out;
+}
+
+#btn-google:hover{
+    background-color: #2a8eff;
+    transition: all 0.7s ease-in-out;
+}
+  
+#btn-google svg{
+    width: 30px;
+    height: 30px;
+}
+
+#mail-carrito{
+    margin-top: 20px;
+    width: 100%;
+    padding: 10px;
+    margin: 20px;
+    border: 3px solid #ADBFEB;
+    border-radius: 25px;
+    transition: all 0.7s ease-in-out;
+}
+
+#mail-carrito:focus{
+    border: 5px solid #0062ff;
+    transition: all 0.7s ease-in-out;
+}
+
+#mail-carrito:hover{
+
+    cursor: url("../cursores/link.png"), auto;
+    background-color: #ADBFEB;
+    color: #4e4e4e;
+}
+
+#btn-continuar{
+    margin-top: 20px;
+    padding: 10px 20px 10px 20px;
+    background-color: #979797;
+    color: white;
+    border: none;
+    border-radius: 25px;
+    cursor: url("../cursores/link.png"), auto;
+    transition: all 0.7s ease-in-out;
+}
+
+#btn-continuar:hover{
+    background-color: #317185;
+    color: rgb(255, 255, 255);
+    transition: all 0.7s ease-in-out;
+}
+
+@media (max-width: 768px){
+    #main-carrito{
+        flex-direction: column;
+        align-items: center;
+    }
+    #lista-skins{
+        margin-top: 25px;
+        height: 50vh;
+        width: 30vh;
+    }
+    #zona-pago{
+        height: 80vh;
+        width: 30vh;
+    }
+
+    #mail-carrito{
+        width: 200px;
+    }
+}

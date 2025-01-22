@@ -1,0 +1,195 @@
+@font-face {
+    font-family: 'BLol';
+    src: url("../css/fuentes/beaufort-for-lol/BeaufortforLOL-Bold.ttf");
+    font-weight: bold;
+    font-style: bold;
+}
+
+html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+    }
+
+:root{
+    --gris: #474646;
+    --azul-teal: #74b3a7;
+    --azul-verdoso: #a3ccaf;
+    --hueso: #e6e1cf;
+    --naranja: #cc5b14;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'BLol';
+    cursor: url("../css/cursores/normal.png"), auto;
+}
+
+*::-webkit-scrollbar{
+    width: 15px;
+    background-color: #192b66;
+    transition: all;
+    transition-duration: 1000ms;
+}
+
+*::-webkit-scrollbar-thumb{
+    border-radius: 20px;
+    border: 3px solid #EFBF1F;
+    transition: all;
+    transition-duration: 1000ms;
+}
+
+*::-webkit-scrollbar-thumb:hover{
+    background-color: #efbe1f48;
+    transition: all;
+    transition-duration: 1000ms;
+}
+
+
+header{
+    background-color: #192b66;
+    position: relative;
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    transition: all 0.5s ease-in-out;
+}
+
+@media (max-width: 500px){
+
+    header{
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        transition: all 0.5s ease-in-out;
+    }
+    
+    #logo-t{
+        width: 300px;
+    }
+
+}
+
+#logo-image{
+    width: 75px;
+    height: auto;
+    cursor: url("../css/cursores/link.png"), auto;
+}
+
+#logo-text{
+    opacity: 0;
+    cursor: url("../css/cursores/normal.png"), auto;
+    width: 200px;
+    height: auto;
+    transition: opacity 1.5s ease-in-out;
+}
+
+#logo-image:hover + #logo-text{
+    display: flex;
+    opacity: 1;
+    transition: opacity 1.5s ease-in-out;
+    cursor: url("../css/cursores/link.png"), auto;
+}
+
+
+#logo-t{
+    text-decoration: none;
+    display: flex;
+    flex-direction: row;
+    align-items: end;
+    transition: opacity 1.5s ease-in-out;
+    cursor: url("../css/cursores/link.png"), auto;
+}
+
+ul{
+    display: flex;
+    flex-direction: row;
+}
+
+.nav{
+    padding: 3px 6px 3px 6px;
+    font-size: 15px;
+    text-align: center;
+    width: 45px;
+    color: black;
+    border: 2px solid #EFBF1F;
+    border-radius: 25px;
+    text-decoration: none;
+    margin: 2px;
+    background-color:#ADBFEB;
+    font-weight: bold;
+    transition: all 0.7s ease-in-out;
+    cursor: url("../css/cursores/link.png"), auto;
+}
+
+.nav:hover{
+    background-color: #3b4661;
+    color: #e6e1cf;
+    transition: all 0.7s ease-in-out;
+}
+
+.nav-carrito{
+    padding: 3px 6px 3px 6px;
+    font-size: 15px;
+    text-align: center;
+    width: 45px;
+    color: black;
+    border: 2px solid #EFBF1F;
+    border-radius: 25px;
+    display: flex;
+    margin: 2px;
+    background-color: #ADBFEB;
+    font-weight: bold;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.7s ease-in-out;
+    cursor: url("./cursores/link.png"), auto;
+}
+
+.nav-carrito:hover{
+    background-color: #3b4661;
+    color: #e6e1cf;
+    transition: all 0.7s ease-in-out;
+}
+
+.nav-carrito span, .nav-carrito img{
+    position: absolute;
+    transition: opacity 0.5s ease-in-out;
+    cursor: url("./cursores/link.png"), auto;
+} 
+
+.nav-carrito span{
+    text-decoration: none;
+    opacity: 1;
+} 
+.nav-carrito img{
+    opacity: 0;
+} 
+
+.nav-carrito:hover span{
+    opacity: 0;
+} 
+.nav-carrito:hover img{
+    opacity: 1;
+} 
+
+footer{
+    background: linear-gradient( rgba(163,204,175,1) 0%, rgba(163,204,175,1) 6%, rgba(25,43,102,1) 100%);
+    color: #EFBF1F;
+    font-weight: bold;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+footer span{
+    text-shadow: 2px  0px 0px #192b66,
+               0px  2px 0px #192b66,
+              -2px  0px 0px #192b66,
+               0px -2px 0px #192b66;
+}

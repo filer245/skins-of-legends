@@ -1,0 +1,5 @@
+<div>
+    <audio src="../public/gifs/maxgato.mp3" autoplay loop></audio>
+    <img src="../public/gifs/cat-cat-love.gif" alt="Maxwell cat">
+    <img src="../public/gifs/cat-running.gif" alt="Maxwell corriendo">
+</div>
