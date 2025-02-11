@@ -1,0 +1,52 @@
+<header class='menu-header'>
+    <nav class='menu'>
+        <ul class='menu-list'>
+        <li><a href='#inicio'>Inicio</a></li><li><a href='#servicios'>Servicios</a></li><li><a href='#nosotros'>Nosotros</a></li><li><a href='#contacto'>Contacto</a></li></ul>
+        <div class='menu-icon'>
+            <img src='menu-icon.png' alt='Menú' />
+        </div>
+    </nav>
+</header>
+
+<style>
+    .menu-list {
+list-style-type: none;
+margin: 0;
+margin-top: 20px;
+margin-bottom: 20px;
+padding: 0;
+display: flex;
+flex-direction: row;
+justify-content: center;
+transition: all 0.5s;
+}
+.menu-icon{
+display: none;
+}
+@media (max-width: 768px) {
+.menu-list {
+display: none;
+flex-direction: column;
+background-color: #007acc;
+position: absolute;
+width: 100%;
+top: 50px;
+left: 0;
+}
+.menu-icon {
+display: block;
+cursor: pointer;
+}
+.menu-list.show {
+display: flex;
+}
+}
+</style>
+
+<script>const menuIcon =
+    document.querySelector('.menu-icon');
+    const menuList =
+    document.querySelector('.menu-list');
+    menuIcon.addEventListener('click', () => {
+    menuList.classList.toggle('show');
+    });</script>

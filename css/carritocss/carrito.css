@@ -40,19 +40,20 @@ html, body {
     flex-direction: column;
     align-items: center;
     padding: 20px;
-    height: 80%;
+    height: 100%;
     width: 20%;
 }
 
 
 #form-carrito {
-    padding: 20px;
+    padding-top: 20px;
+    padding-bottom: 20px;
     display: flex;
     flex-direction: column;
     align-items: center;
     border: 3px solid #ADBFEB;
     border-radius: 25px;
-    height: 50%;
+    height: fit-content;
     width: 100%;
     justify-content: space-around;
 }
@@ -60,7 +61,6 @@ html, body {
 
 #btn-google{
     display: flex;
-    
     background-color: #777c85;
     color: white;
     border: none;
@@ -68,6 +68,7 @@ html, body {
     cursor: url("../cursores/link.png"), auto;
     transition: all;
     padding: 10px 20px 10px 20px;
+    margin: 20px;
     transition: all 0.7s ease-in-out;
 }
 
@@ -115,7 +116,24 @@ html, body {
 }
 
 #btn-continuar:hover{
-    background-color: #317185;
+    background-color: #29aa54;
+    color: rgb(255, 255, 255);
+    transition: all 0.7s ease-in-out;
+}
+
+#btn-reg{
+    margin-top: 20px;
+    padding: 10px 20px 10px 20px;
+    background-color: #979797;
+    color: white;
+    border: none;
+    border-radius: 25px;
+    cursor: url("../cursores/link.png"), auto;
+    transition: all 0.7s ease-in-out;
+}
+
+#btn-reg:hover{
+    background-color: #da952e;
     color: rgb(255, 255, 255);
     transition: all 0.7s ease-in-out;
 }

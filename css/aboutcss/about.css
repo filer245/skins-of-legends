@@ -25,11 +25,15 @@ html, body{
     justify-content: center;
     align-items: center;
     position: relative;
+
 }
 
 #broma{
+    
     display: flex;
+    justify-content: center;
     align-items: center;
+    width: 100%;
     margin-bottom: 20px;
 }
 
@@ -42,6 +46,7 @@ html, body{
 }
 
 #revelado, #escondido{
+
     position: absolute;
     transition: opacity 1.5s ease-in-out;
 }
@@ -121,6 +126,13 @@ html, body{
     margin-top: 5px;
     cursor: url("../cursores/link.png"), auto;
     background-color:#c3d0f0;
+    transition: all 0.8s ease-in-out;
+}
+
+#bt-cont:hover{
+    background-color: #3857a7;
+    color: aliceblue;
+    transition: all 0.8s ease-in-out;
 }
 
 @media(max-width:600px){
