@@ -1,5 +1,6 @@
 
 
+
 function goToReg(){
     location.href = '../html/formularios/registro.html';
 }

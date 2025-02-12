@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" contet="Landing page para la posterior tienda de skins">
+    <meta name="keywords" content="skins lol tienda league of legends aspectos campeones personalización cosméticos riot games skins exclusivas ofertas gaming">
+    <meta name="author" content="Sergio Paniagua">
+    <link rel="stylesheet" href="../css/global.css">
+    <link rel="stylesheet" href="../css/mmrcss/premmr.css">
+    <link rel="shortcut icon" href="../public/logo-ba.svg" type="image/x-icon">
+    <title>Skins of Legends</title>
+
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs"></script>
+    <script>
+    var modelo = null;
+    async function cargarModelo() {
+        modelo = await tf.loadLayersModel("../modelo/model.json");
+        console.log("Modelo cargado:", modelo);
+    }
+    cargarModelo();
+    
+
+    function calcMmr(){
+        
+        var mmr = document.getElementById("mmr").value;
+        const p = document.getElementById("probabilidad");
+
+        if(modelo!=null){
+            var tensor = tf.tensor1d([parseInt(mmr)]);
+            var prediccion = modelo.predict(tensor).dataSync();
+            prediccion = Math.round(prediccion);
+            console.log("Predicción:", prediccion);
+        }
+        p.innerHTML = "Tú MMR es "+(prediccion==1?" bueno":" malo");
+        p.style.color = "white";
+        p.style.backgroundColor = prediccion==1? "#00ff0056":"#ff00005e";
+        p.style.border = "2px solid #EFBF1F";
+    }   
+
+    </script>
+
+</head>
+    <body>
+        <!-- Header en todas las páginas -->
+        <header class="menu-header">
+            <a class="menu-icon" id="logo-t" href="./index.html">
+                <img id="logo-image" src="../public/logo-ba.svg" alt="Logo de Skins of Leguends">
+                <img id="logo-text" src="../public/logo-text.png" alt="Logo de Skins of Leguends">
+            </a>
+
+            <nav class="menu">
+                
+                <div class='menu-ic-des'>
+                    <img src='../public/iconmonstr-line-three-horizontal-lined.svg' alt='Menú' width="50px" />
+                </div>
+                <ul class="menu-list">
+                    <a class="nav" href="./index.html">Inicio</a>
+                    <a class="nav" href="./404.html">Tienda</a>
+                    <a class="nav" href="./about.html">About</a>
+                    <a class="nav-carrito" href="./carrito.html">
+                        <span>Carrito</span>
+                        <img width="30px" src="../public/carrito.svg" alt="Carrito compra">
+                    </a>
+                </ul>
+                
+            </nav>
+        </header>
+        <!-- Main en todas las páginas -->
+        <main id="main-mmr">
+            <div id="div-main-mmr">
+                <h1 id="tit-main-mmr">Calculadora de MMR</h1>
+                <h3>Introduce tus LPs de victoria y te diremos si es buen o mal MMR.</h3>
+            </div>
+            
+            <input type="number" id="mmr">
+            <button onclick="calcMmr()">Calcular</button>
+            <p id="probabilidad"></p>
+            
+
+        </main>
+        <!-- Footer en todas las páginas -->
+        <footer>
+            <span>Hecho por Sergio Paniagua</span>
+        </footer>
+        
+        <script src="../scripts/app.js"></script>
+    </body>
+</html>
